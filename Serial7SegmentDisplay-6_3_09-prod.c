@@ -329,8 +329,8 @@ void display(char number, int digit)
 	 		case 'L':
 				PORTD = 0b01110000;
 				break;
-			case 0xf8: // ascii degree symbol
-			case 0xb0: // unicode degree symbol
+			case '\xf8': // ascii degree symbol
+			case '\xb0': // unicode degree symbol
 				PORTD = 0b11001010;
 				break;
 			case '-':
