@@ -202,7 +202,7 @@ void ioinit()
 
 	// intialize USART Baud rate: 9600
 	// enable rx and rx interrupt
-    UBRR0H = MYUBRR >> 8;
+    UBRR0H = (MYUBRR) >> 8;
     UBRR0L = MYUBRR;
     UCSR0B = (1<<RXCIE0)|(1<<RXEN0);
 
