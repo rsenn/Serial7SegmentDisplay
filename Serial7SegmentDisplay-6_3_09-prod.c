@@ -235,6 +235,16 @@ void display(char number, int digit)
 	}
 	else
 	{
+		/*	aaaa
+			 f		b
+			 f		b
+				gggg
+			 e		c
+			 e		c
+				dddd	 */
+
+		/* gfedbca. */
+
 		switch(number)	// Set PORTD, display pins, to correct output
 		{
 			case 0:
@@ -306,6 +316,38 @@ void display(char number, int digit)
 			case 'f':
 			case 'F':
 				PORTD = 0b11100010;
+				break;
+			case 'h':
+			case 'H':
+				PORTD = 0b11101100;
+				break;
+			case 'j':
+			case 'J':
+				PORTD = 0b00111100;
+				break;
+	 		case 'l':
+	 		case 'L':
+				PORTD = 0b01110000;
+				break;
+			case '°':
+				PORTD = 0b11001010;
+				break;
+			case '-':
+				PORTD = 0b10000000;
+				break;
+			case '_':
+				PORTD = 0b00010000;
+				break;
+			case '`':
+			case '~':
+			case '^':
+				PORTD = 0b00000010;
+				break;
+			case '"':
+				PORTD = 0b01001000;
+				break;
+			case '\'':
+				PORTD = 0b01000000;
 				break;
 		}
 
