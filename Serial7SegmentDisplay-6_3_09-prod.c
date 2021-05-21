@@ -79,7 +79,7 @@ ISR(SPI_STC_vect)
 }
 
 // UART interrupt, enter when receive a character over RX
-ISR(USART_RXC_vect)
+ISR(USART_RX_vect)
 {
 	uartMode = 1;
 	if (spiMode)
