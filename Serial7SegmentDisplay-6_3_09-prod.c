@@ -44,7 +44,7 @@ char DPStatus = 0;	// Decimal point status, each bit represents one DP
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // SPI interrupt, enter when SPIF is set
-SIGNAL(SIG_SPI)
+ISR(SPI_STC_vect)
 {
 	// Set mode to SPI
 	// if previously in UART mode, reset receiveCount
@@ -79,7 +79,7 @@ SIGNAL(SIG_SPI)
 }
 
 // UART interrupt, enter when receive a character over RX
-SIGNAL(SIG_USART_RECV)
+ISR(USART_RXC_vect)
 {
 	uartMode = 1;
 	if (spiMode)
